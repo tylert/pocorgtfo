@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>
+"first they ignore you, then they threaten to sue you, then they deny the 
+vulnerability, then you p0wn them"
+</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#FF0000" VLINK="#0000FF" ALINK="#00
+FF00">
+<!-- Nothing to see but we have happily logged you.  Thank you! -->
+<QUOTE>
+"first they ignore you, then they threaten to sue you, then they deny the 
+vulnerability, then you p0wn them" -- with apologies to Mahatma Gandhi
+</QUOTE>
+<PRE>
+archimede:~$ file pocorgtfo04.pdf 
+pocorgtfo04.pdf: PDF document, version 1.5
+</PRE>
+<P>
+and
+</P>
+<PRE>
+archimede:~$ unzip -v pocorgtfo04.pdf 
+Archive:  pocorgtfo04.pdf
+warning [pocorgtfo04.pdf]:  798586 extra bytes at beginning or within zipfile
+  (attempting to process anyway)
+error [pocorgtfo04.pdf]:  reported length of central directory is
+  -798586 bytes too long (Atari STZip zipfile?  J.H.Holm ZIPSPLIT 1.1
+  zipfile?).  Compensating...
+ Length   Method    Size  Ratio   Date   Time   CRC-32    Name
+--------  ------  ------- -----   ----   ----   ------    ----
+       0  Stored        0   0%  06-24-14 18:56  00000000  bin2png/
+    5010  Defl:X     1529  70%  06-24-14 18:56  5b458885  bin2png/bin2png.py
+   18025  Defl:X     6802  62%  06-24-14 18:56  2bf94d82  bin2png/LICENSE
+    1141  Defl:X      590  48%  06-24-14 18:56  bac8ea63  bin2png/README.md
+  140413  Defl:X    54747  61%  06-24-14 18:56  a54b802b  darfsteller.txt
+    2841  Defl:X     1340  53%  06-24-14 18:56  0ed7331f  gods.txt
+       0  Stored        0   0%  06-24-14 18:56  00000000  lenticrypt/
+   36445  Defl:X     7899  78%  06-24-14 18:56  b115a5b5  lenticrypt/lenticrypt.py
+   18025  Defl:X     6802  62%  06-24-14 18:56  2bf94d82  lenticrypt/LICENSE
+     776  Defl:X      388  50%  06-24-14 18:56  44837f8e  lenticrypt/README.md
+    2709  Defl:X      697  74%  06-24-14 18:56  42af5a59  lenticrypt/test.py
+ 3111965  Defl:X  3112440   0%  06-24-14 18:56  bc6aa4f8  pocorgtfo.png
+   25986  Defl:X    10749  59%  06-24-14 18:56  796d27c5  theveldt.txt
+  239224  Defl:X   235980   1%  06-24-14 18:56  9e276d18  tsb-20140401.zip
+26750864  Defl:X 26438160   1%  06-24-14 18:56  c0113904  pocorgtfo03.pdf
+--------          -------  ---                            -------
+30353424         29878123   2% 
+</PRE>
+<P>
+Surprise, 0x03 is included in 0x04, that's a classic by now and you can read <a href="spoiler03.html">the spoiler for 0x03</A> too!
+</P>
+<P>
+As usual there is more...
+</P>
+<PRE>
+archimede:~$ truecrypt --mount pocorgtfo04.pdf
+[password is 123456]
+archimede:~$
+</PRE>
+<P>
+That worked!
+</P>
+<PRE>
+archimede:~$ cd /mnt/NO\ NAME
+archimede:/mnt/NO NAME$ ls
+reverseme.bin
+archimede:/mnt/NO NAME$ file reverseme.bin 
+reverseme.bin: JPEG image data, JFIF standard 1.01, comment: "%PDF-1.4"
+</PRE>
+<P>
+Oh, this smells like another AngeMagic!
+</P>
+<PRE>
+archimede:/mnt/NO NAME$ cp reverseme.bin /tmp/reverseme.jpg
+</PRE>
+<P>
+... and we find<BR/> <IMG SRC="reverseme.jpg" ALT="The image contained in the Truecrypt volume within the PoC||GTFO 0x04 PDF"/><BR/> but wait, what about the comment? The comment clearly says
+</P>
+<PRE>
+%PDF-1.4
+</PRE>
+and that smells... so
+<PRE>
+archimede:/mnt/NO NAME$ cp /tmp/reverseme.jpg /tmp/reverseme.pdf
+</PRE>
+<P>
+and we obtain <A HREF="reverseme.pdf">a valid PDF of the same image</A>!
+</P>
+<P>
+But there is more... 
+</P>
+<PRE>
+archimede:/mnt/NO NAME$ unzip -v /tmp/reverseme.pdf
+Archive:  /tmp/reverseme.pdf
+
+endstream
+endobj
+
+
+xref
+0 1
+0000000000 65535 f
+0000000010 00000 n
+
+trailer
+<</Root 1 0 R>>
+
+startxref
+70488
+%%EOF
+%??
+ Length   Method    Size  Ratio   Date   Time   CRC-32    Name
+--------  ------  ------- -----   ----   ----   ------    ----
+   23110  Stored    23110   0%  00-00-80 00:00  67a0921c  reverseme.jpg
+--------          -------  ---                            -------
+   23110            23110   0%                            1 file
+</PRE>
+<P>
+Ah, the greatness of Ange...
+</P>
+</BODY>
+</HTML>

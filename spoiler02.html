@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>
+"first they ignore you, then they threaten to sue you, then they deny the 
+vulnerability, then you p0wn them"
+</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#FF0000" VLINK="#0000FF" ALINK="#00
+FF00">
+<!-- Nothing to see but we have happily logged you.  Thank you! -->
+<QUOTE>
+"first they ignore you, then they threaten to sue you, then they deny the 
+vulnerability, then you p0wn them" -- with apologies to Mahatma Gandhi
+</QUOTE>
+<PRE>
+bruma:~ arrigo$ file pocorgtfo02.pdf 
+pocorgtfo02.pdf: x86 boot sector
+</PRE>
+and
+<PRE>
+bruma:~arrigo$ unzip -v pocorgtfo02.pdf 
+Archive:  pocorgtfo02.pdf
+warning [pocorgtfo02.pdf]:  8016414 extra bytes at beginning or within zipfile
+  (attempting to process anyway)
+ Length   Method    Size  Cmpr    Date    Time   CRC-32   Name
+--------  ------  ------- ---- ---------- ----- --------  ----
+     852  Defl:X      487  43% 12-06-2013 15:25 0fc440e1  README.txt
+    6794  Defl:X     3480  49% 12-06-2013 15:25 4b385f76  coda.txt
+   20164  Defl:X     8528  58% 12-06-2013 15:25 962bd958  feeling.txt
+   12618  Defl:X     5474  57% 12-06-2013 15:25 fcda0efb  harrison.txt
+       0  Stored        0   0% 12-06-2013 15:25 00000000  pgpquine/
+     275  Defl:X      157  43% 12-06-2013 15:25 2790c077  pgpquine/Makefile
+    1006  Defl:X      451  55% 12-06-2013 15:25 674094dc  pgpquine/inflate.c
+    5323  Defl:X     1336  75% 12-06-2013 15:25 37ca5711  pgpquine/quine.c
+  203706  Defl:X    56538  72% 12-06-2013 15:25 79ba361f  rfc4880.txt
+ 2046109  Defl:X  2008069   2% 12-06-2013 15:25 95b8c390  tamagotchi.zip
+   15565  Defl:X     6602  58% 12-06-2013 15:25 cf9bdba0  thewub.txt
+  278598  Defl:X   276364   1% 08-05-2013 11:06 cd0ed2ff  pocorgtfo00.pdf
+ 3790438  Defl:X  3723466   2% 10-13-2013 00:47 c9220017  pocorgtfo01.pdf
+--------          -------  ---                            -------
+ 6381448          6090952   5%                            13 files
+</PRE>
+If the above looks amazing, and in it is in many ways, then you should read the
+other work by Ange Albertini, <A HREF="https://code.google.com/p/corkami/wiki/mix">mix</A> and his <A HREF="https://code.google.com/p/corkami/">binary polyglots</A>.
+</BODY>
+</HTML>

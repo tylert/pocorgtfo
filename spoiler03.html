@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>
+"first they ignore you, then they threaten to sue you, then they deny the 
+vulnerability, then you p0wn them"
+</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#FF0000" VLINK="#0000FF" ALINK="#00
+FF00">
+<!-- Nothing to see but we have happily logged you.  Thank you! -->
+<QUOTE>
+"first they ignore you, then they threaten to sue you, then they deny the 
+vulnerability, then you p0wn them" -- with apologies to Mahatma Gandhi
+</QUOTE>
+<PRE>
+archimede:~$ file pocorgtfo03.pdf 
+pocorgtfo03.pdf: JPEG image data, JFIF standard 1.01, comment: ""
+</PRE>
+<P>
+and
+</P>
+<PRE>
+archimede:~$ unzip -v pocorgtfo03.pdf 
+Archive:  pocorgtfo03.pdf
+warning [pocorgtfo03.pdf]:  12224072 extra bytes at beginning or within zipfile
+  (attempting to process anyway)
+ Length   Method    Size  Ratio   Date   Time   CRC-32    Name
+--------  ------  ------- -----   ----   ----   ------    ----
+    2561  Defl:X     1266  51%  02-10-14 06:23  1cd771a3  alexander.txt
+    7848  Defl:X     2438  69%  02-08-14 20:20  8a6a8638  bochs-2.6.2.patch
+    6135  Defl:X     2213  64%  02-08-14 20:21  29c418e5  bochs-20140203.patch
+    7248  Defl:X     6970   4%  02-09-14 08:35  004f8d8a  defusing.zip
+    4830  Defl:X     2510  48%  12-01-13 15:48  de2558ee  despair.txt
+   14892  Defl:X     5919  60%  11-27-13 19:03  c0544467  lasta.txt
+   26325  Defl:X    10767  59%  02-07-14 21:06  fdc977f0  lastq.txt
+  473449  Defl:X   473001   0%  02-07-14 21:06  54e11d4c  netwatch-337f8b1.tar.gz
+  131930  Defl:X   127770   3%  02-24-14 20:32  0de4adf4  nokiacipher.png
+   14645  Defl:X     8926  39%  02-17-14 18:52  35c18990  packed
+    2129  Defl:X      989  54%  02-07-14 21:06  02b0f193  saucers.txt
+    3144  Defl:X     1399  56%  02-07-14 21:06  536812c9  tamadec.txt
+    6227  Stored     6227   0%  02-07-14 21:06  091d21e7  tetranglix.tar.bz2
+14109425  Defl:X 13873772   2%  02-07-14 21:06  5215c937  pocorgtfo02.pdf
+     322  Defl:X      234  27%  03-03-14 01:28  050a8bf4  pocorgtfo03-encrypt.py
+--------          -------  ---                            -------
+14811110         14524401   2%                            15 files
+</PRE>
+<P>
+I draw your attention to the fact that 0x02 being included in 0x03 is not an accident, why don't you have a look at <A HREF="spoiler02.html">the spoiler for 0x02</A> once you are done with 0x03?
+</P>
+<P>
+But there is more...
+</P>
+<IMG SRC="pocorgtfo-tetris.png" ALT="Twitter: @travisgoodspeed: Scan the barcode on page 31 or type the bytes on page 32 to get a working Tetris game as an X86 Master Boot Record."/>
+<P>
+and
+<P/>
+<IMG SRC="pocorgtfo03-ange.png" ALT="Twitter: @angealbertini: PoC||GTFO 0x03 is my latest polyglot: a PDF/ZIP/JPG/Audio (raw AFSK)/PNG (encrypted with AES) file."/>
+<P>
+with the accompanying image:
+<P/>
+<IMG SRC="pocorgtfo03-angedrawing.jpeg" ALT="Image by Ange Albertini depicting the PoC||GTFO 0x03 polyglot."/>
+<P>
+closing remark:
+</P>
+<PRE>
+>trid.exe pocorgtfo03.pdf
+
+TrID/32 - File Identifier v2.10 - (C) 2003-11 By M.Pontello
+Definitions found:  5279
+Analyzing...
+
+Collecting data from file: pocorgtfo03.pdf
+ 71.4% (.MP3) MP3 audio (ID3 v1.x tag) (2500/1/1)
+ 28.5% (.MP3) MP3 audio (1000/1)
+</PRE>
+<P>
+If the above looks amazing, and in it is in many ways, then you should read the
+other work by Ange Albertini, <A HREF="https://code.google.com/p/corkami/wiki/mix">mix</A> and his <A HREF="https://code.google.com/p/corkami/">binary polyglots</A>.
+</P>
+</BODY>
+</HTML>
